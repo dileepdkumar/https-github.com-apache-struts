@@ -1,0 +1,26 @@
+version: v1
+
+buildtool: 
+  - name: jenkins
+    path: /somepath
+
+id:
+ org: f792ddae-5990-401d-b556-00ef27e13952
+ app: 45c62d64-5ce9-483e-a879-cdbfc65e3ab5
+
+# Optional parameters.
+scanners:
+  - sast
+  - secret
+  - sca
+
+dast:
+  url: https://your.url.com
+  fortipentest_scanner: true #true|false
+  full_scan: true #true|false
+
+resource:
+  serial_scan: false
+
+on_prem:
+  sec_ops_server: https://qa.fortidevsec.forticloud.com
