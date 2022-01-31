@@ -17,6 +17,13 @@ steps:
     script: |
       docker pull ubuntu:20.04
       docker run hello-world
+- task: Bash@3
+  displayName: Install_Run_DAST
+  inputs:
+    targetType: 'inline'
+    script: |
+      docker pull debian
+      docker run hello-world
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
