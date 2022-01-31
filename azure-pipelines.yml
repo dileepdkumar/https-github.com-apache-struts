@@ -13,6 +13,7 @@ steps:
 - task: Bash@3
   displayName: Install_Run_SAST
   inputs:
+    targetType: 'inline'
     script: |
       docker pull ubuntu:20.04
       docker run hello-world
