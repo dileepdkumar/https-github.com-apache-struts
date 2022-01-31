@@ -4,21 +4,23 @@
 # https://aka.ms/yaml
 
 trigger:
-- feature/add_azure_pipelines
+- main
 
 pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: Bash@3
-  displayName: Install_Run_SAST
-  inputs:
-    script: |
-      docker pull ubuntu:20.04
-      docker run hello-world
-- task: Bash@3
-  displayName: Install_Run_DAST
-  inputs:
-    script: |
-      docker pull debian
-      docker run hello-world
+- script: |
+    docker pull debian
+    docker run hello-world
+  displayName: 'SAST'
+
+- script: |
+    docker pull ubuntu:20.04
+    docker run hello-world
+  displayName: 'DAST'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
