@@ -15,7 +15,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      docker pull ubuntu:20.04
+      docker pull fedora
       docker run hello-world
 - task: Bash@3
   displayName: Install_Run_DAST
