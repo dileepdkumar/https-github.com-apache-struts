@@ -10,8 +10,15 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: docker run hello-world
+- script: |
+    docker pull debian
+    docker run hello-world
   displayName: 'SAST'
+
+- script: |
+    docker pull ubuntu:20.04
+    docker run hello-world
+  displayName: 'DAST'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
