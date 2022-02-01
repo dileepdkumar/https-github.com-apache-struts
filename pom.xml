@@ -67,7 +67,7 @@
             <name>The Apache Software License, Version 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
-            <comments />
+            <comments/>
         </license>
     </licenses>
 
@@ -951,7 +951,7 @@
             <dependency>
                 <groupId>net.sf.oval</groupId>
                 <artifactId>oval</artifactId>
-                <version>1.31</version>
+                <version>1.90</version>
             </dependency>
 
             <dependency>
