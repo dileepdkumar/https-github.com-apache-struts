@@ -1,8 +1,9 @@
 trigger:
-— main
+- feature/add_azure_pipelines
+
 pool:
   vmImage: ubuntu-latest
- 
+
 steps:
   – task: Bash@3
     displayName: Install_Run_SAST
