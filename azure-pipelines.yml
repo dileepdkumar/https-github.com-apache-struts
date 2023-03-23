@@ -1,5 +1,5 @@
 trigger:
-- feature/add_azure_pipelines
+- main
 pool:
   vmImage: ubuntu-latest
 steps:
