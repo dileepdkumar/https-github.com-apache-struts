@@ -1,10 +1,10 @@
 trigger:
-  — main
+— main
 pool:
   vmImage: ubuntu-latest
  
 steps:
-  –task: Bash@3
+  – task: Bash@3
     displayName: Install_Run_SAST
     inputs:
        targetType: 'inline'
