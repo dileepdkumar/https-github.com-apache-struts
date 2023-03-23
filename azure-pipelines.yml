@@ -10,12 +10,12 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      docker pull qaregistry.fortinet.com/fortidevsec/fdevsec_sast:latest
+      docker pull registry.fortinet.com/fortidevsec/fdevsec_sast:latest
       docker run --rm  --mount type=bind,source="$PWD",target=/scan qaregistry.fortinet.com/fortidevsec/fdevsec_sast:latest
 - task: Bash@3
   displayName: Install_Run_DAST
   inputs:
     targetType: 'inline'
     script: |
-      docker pull qaregistry.fortinet.com/fortidevsec/fdevsec_dast:latest
+      docker pull registry.fortinet.com/fortidevsec/fdevsec_dast:latest
       docker run --rm  --mount type=bind,source="$PWD",target=/scan qaregistry.fortinet.com/fortidevsec/fdevsec_dast:latest
