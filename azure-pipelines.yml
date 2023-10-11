@@ -9,6 +9,3 @@ steps:
     targetType: 'inline'
     script: |
 	env
-	env | grep -E "EMAIL|LICENSE_SERIAL|ASSET_TOKEN|SCANURL|SCANTYPE|ASSET" > /tmp/env
-	docker pull registry.fortidast.forticloud.com/dastdevopsproxy:latest
-	docker run --rm --env-file /tmp/env --network=host registry.fortidast.forticloud.com/dastdevopsproxy:latest
