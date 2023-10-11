@@ -8,8 +8,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      env
-	    export EMAIL=kdeepak@fortinet.com LICENSE_SERIAL=FFPENT0000232928 ASSET_TOKEN=ojcAJBzPwb/vlYHTNhyI17q6erKYOHii6PFbJKAFqR0hgKLNhO+AMpg3Z/Kw8ppTdtudWzWc7xFAGH9PbsxJ+6xkFHY/cheCBhZUaw== SCANURL=http://testphp.vulnweb.com/ SCANTYPE=1 ASSET=5053c4a1-b123-4485-a3fa-74e2de13a3a1
-	    env | grep -E "EMAIL|LICENSE_SERIAL|ASSET_TOKEN|SCANURL|SCANTYPE|ASSET" > /tmp/env
-	    docker pull registry.fortidast.forticloud.com/dastdevopsproxy:latest
-	    docker run --rm --env-file /tmp/env --network=host registry.fortidast.forticloud.com/dastdevopsproxy:latest
+	env
+	env | grep -E "EMAIL|LICENSE_SERIAL|ASSET_TOKEN|SCANURL|SCANTYPE|ASSET" > /tmp/env
+	docker pull registry.fortidast.forticloud.com/dastdevopsproxy:latest
+	docker run --rm --env-file /tmp/env --network=host registry.fortidast.forticloud.com/dastdevopsproxy:latest
