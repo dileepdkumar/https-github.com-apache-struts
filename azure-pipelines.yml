@@ -8,8 +8,8 @@ stages:
 - stage: SAST
   displayName: 'Static Application Security Testing (SAST) Stage'
   jobs:
-  - job: Run SAST Scanner
-    displayName: 'Run SAST Scanner'
+  - job: RunSAST
+    displayName: 'Run SAST'
     steps:
     - task: Bash@3
       displayName: 'Install and Run SAST'
