@@ -1,13 +1,12 @@
 trigger:
-    - main
+  - main
 pool:
-    vmImage: ubuntu-latest
-
+  vmImage: ubuntu-latest
 steps:
--task: Bash@3
-    displayName: Install_Run_SAST
-    inputs:
-        targetType: 'inline'
--script: |
+- task: Bash@3
+  displayName: Run_FortiDAST
+  inputs:
+    targetType: 'inline'
+- script: |
     env | grep -E "AZURE_HTTP_USER_AGENT|BUILD_BUILDID" > /tmp/env
     docker run --pull always --rm --env-file /tmp/env --mount type=bind,source="$PWD",target=/scan registry.fortidevsec.forticloud.com/fdevsec_sast:latest
