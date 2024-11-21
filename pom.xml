@@ -67,7 +67,7 @@
             <name>The Apache Software License, Version 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
-            <comments />
+            <comments/>
         </license>
     </licenses>
 
@@ -81,7 +81,7 @@
         <struts2.springPlatformVersion>3.0.5.RELEASE</struts2.springPlatformVersion>
         <ognl.version>3.0.21</ognl.version>
         <asm.version>3.3</asm.version>
-        <asm5.version>5.0.2</asm5.version>
+        <asm5.version>5.2</asm5.version>
         <tiles.version>2.2.2</tiles.version>
         <log4j2.version>2.3</log4j2.version>
 
